@@ -10,9 +10,13 @@ let tableFields= ["datetime", "city","state","country","shape","durationMinutes"
 
 // Obtaining the HTML reference 
 let tBody = d3.select("tbody");
+let btnSearch = d3.select("#filter-btn")
+
 let dateTime = d3.select("#datetime")
 let city = d3.select("#city")
-let btnSearch = d3.select("#filter-btn")
+let state = d3.select("#state")
+let country = d3.select("#country")
+let shape = d3.select("#shape")
 
 // Building the html table 
 let loadTableRows = (data) => { 
