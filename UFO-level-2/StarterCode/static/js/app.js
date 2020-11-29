@@ -11,6 +11,7 @@ let tableFields= ["datetime", "city","state","country","shape","durationMinutes"
 // Obtaining the HTML reference 
 let tBody = d3.select("tbody");
 let dateTime = d3.select("#datetime")
+let city = d3.select("#city")
 let btnSearch = d3.select("#filter-btn")
 
 // Building the html table 
@@ -41,6 +42,8 @@ btnSearch.on("click", () => {
 
     // Give the input value a variable 
     let searchDateTime = dateTime.property("value");
+    let searchCity = dateTime.property("value");
+    let searchState = dateTime.property("value")
 
     // Filter the table data to only return data equal to the input variable 
     let filterTableDate = tableData.filter(tableData => tableData.datetime === searchDateTime);
