@@ -28,7 +28,18 @@ btnSearch.on("click", () => {
 
     d3.event.preventDefault();
 
-    let searchDateTime = dateTime.property("value")
+    let searchDateTime = dateTime.property("value");
 
-    let filteredTableDate = tableData.filter(tableData => tableData.dateTime === searchDateTime)
+
+
+    let filterTableDate = tableData.filter(tableData => tableData.datetime === searchDateTime);
+
+    if(filterTableDate.length !== 0 ){
+        loadTableRows(filterTableDate)
+    }
+    else{
+        tBody.html("")
+
+        tBody.append("tr").append("td").text("Unfortunately, there were no sightings on that date")
+    }
 })
