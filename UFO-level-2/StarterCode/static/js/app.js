@@ -1,7 +1,3 @@
-// from data.js
-let tableData = data;
-
-// YOUR CODE HERE!
 // Selecting data from from data.js
 let tableData = data;
 
@@ -10,13 +6,8 @@ let tableFields= ["datetime", "city","state","country","shape","durationMinutes"
 
 // Obtaining the HTML reference 
 let tBody = d3.select("tbody");
-let btnSearch = d3.select("#filter-btn")
-
 let dateTime = d3.select("#datetime")
-let city = d3.select("#city")
-let state = d3.select("#state")
-let country = d3.select("#country")
-let shape = d3.select("#shape")
+let btnSearch = d3.select("#filter-btn")
 
 // Building the html table 
 let loadTableRows = (data) => { 
@@ -46,8 +37,6 @@ btnSearch.on("click", () => {
 
     // Give the input value a variable 
     let searchDateTime = dateTime.property("value");
-    let searchCity = dateTime.property("value");
-    let searchState = dateTime.property("value")
 
     // Filter the table data to only return data equal to the input variable 
     let filterTableDate = tableData.filter(tableData => tableData.datetime === searchDateTime);
