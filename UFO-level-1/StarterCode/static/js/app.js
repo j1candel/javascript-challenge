@@ -2,7 +2,7 @@
 let tableData = data;
 
 // Making an array with all the names of the fields 
-let tableFields= ["datetime", "city","ar","country","shape","durationMinutes","comments"]
+let tableFields= ["datetime", "city","state","country","shape","durationMinutes","comments"]
 
 // Obtaining the HTML reference 
 let tBody = d3.select("tbody");
