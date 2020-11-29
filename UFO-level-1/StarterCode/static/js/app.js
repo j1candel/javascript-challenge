@@ -1,7 +1,16 @@
-// from data.js
+// Selecting data from from data.js
 let sightings = data;
 
-// YOUR CODE HERE!
+//Selecting the dateTime 
 let dateTime = d3.select("#datetime")
 
-dateTime
+//Create an event handler
+dateTime.on("submit", runEnter);
+
+
+// Completing the event handler form
+function runEnter() {
+    
+    //Prevent the page from refreshing 
+    d3.event.preventDefault()
+}
